@@ -41,31 +41,35 @@ This is a simple Django REST API for user registration, login with JWT, and prot
 ## How to Use:
 
 - Register a user:
-```bash
-POST http://localhost:8000/api/register/
+``` bash
+POST http://localhost:8000/api/register/ 
 ```
-    - ```json
+- Include the following JSON body:
+     ```json
          {
             "username": "ali",
             "email": "ali@example.com",
             "password": "yourpassword123*"
         }
     ```
+    
 - Login and get token:
 ```bash
 POST http://localhost:8000/api/login/
 ```
-    - ```json 
+- Include the following JSON body:
+  ```json 
         {
             "email": "ali@example.com",
             "password": "yourpassword123*"
         }   
     ```
+     
 - Use the token to access profile:
 ```bash
 GET http://localhost:8000/api/profile/
-Authorization: Bearer <your_token>
 ```
+- Authorization: Bearer <your_token>
 
 ---
 
